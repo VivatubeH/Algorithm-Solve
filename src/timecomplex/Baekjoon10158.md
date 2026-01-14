@@ -13,4 +13,9 @@
 3. 주어진 격자에서만 움직이므로 주기성이 존재하므로 주기성을 이용한다.
 4. 0.15초 제한에서는 Scanner, print 사용 시 시간 초과 가능성 -> BufferedReader, BufferedWriter 사용
 5. 자바8로는 Scanner 사용 시 시간 초과 x, 자바 11은 Scanner 사용 시 시간 초과가 발생했다.
-- 자바 11로 하려면 BufferedReader, BufferedWriter를 사용한다. 
+- 자바 11로 하려면 BufferedReader, BufferedWriter를 사용한다.
+6. 주기성 : X(T) = X(T % 2W), Y(T) = Y(T % 2H)
+7. P에서 시작 T시간 후 위치 = 0에서 출발 (P + T) 시간 후의 위치
+- X(P + T) = X((P + T) % 2W)
+
+![img_1.png](img_1.png)
