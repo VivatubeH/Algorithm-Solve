@@ -70,7 +70,7 @@ public static int upperBound(List<Integer> list, int target) {
         if (list.get(mid) > target) {
             right = mid; // 오른쪽 칸막이를 mid로 당긴다.
         } 
-        // 중앙 숫자가 타켓보다 작담녀?
+        // 중앙 숫자가 타켓보다 작다면?
         // -> mid번째 칸막이와 그 왼쪽이 절대 답이 될 수 없다.
         else {
             left = mid + 1;
