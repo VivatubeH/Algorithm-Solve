@@ -1,6 +1,5 @@
-package twoPointer;
+package baekjoon.twoPointer;
 import java.io.*;
-import java.util.*;
 /*
  * 입력: 알파벳의 최대 개수 N ( 2 ~ 26), 문자열 ( 길이는 1에서 10만, 모든 char는 알파벳 소문자만 포함 )
  * 출력: 번역기가 인식할 수 있는 문자열의 최대 길이

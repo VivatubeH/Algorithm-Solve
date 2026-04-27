@@ -1,6 +1,4 @@
-package stack;
-import java.io.*;
-import java.util.*;
+package baekjoon.stack;
 
 /*
  * 입력: 괄호열을 나타내는 문자열 스트링 ( 길이는 1 ~ 30 )

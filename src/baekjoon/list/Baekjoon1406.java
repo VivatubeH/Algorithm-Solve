@@ -1,4 +1,4 @@
-package list;
+package baekjoon.list;
 import java.io.*;
 import java.util.*;
 /*

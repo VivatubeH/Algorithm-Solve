@@ -1,4 +1,4 @@
-package binarySearch;
+package baekjoon.binarySearch;
 import java.io.*;
 import java.util.*;
 
@@ -7,7 +7,7 @@ public class Baekjoon10816 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int N = Integer.parseInt(br.readLine()); // 상근이가 가진 숫자 카드의 개수 N
-        List<Integer> list = new ArrayList<>(); // 상근이가 카지고 있는 카드의 정수를 저장할 list
+        List<Integer> list = new ArrayList<>(); // 상근이가 가지고 있는 카드의 정수를 저장할 list
         StringTokenizer numberTokens = new StringTokenizer(br.readLine()); // 상근이가 가지고 있는 숫자를 저장할 토큰
         for (int i = 0; i < N; i++) { // N개의 숫자 토큰을 토대로
             int current = Integer.parseInt(numberTokens.nextToken()); // 해당 숫자

@@ -33,18 +33,29 @@ idx = (idx + K - 1) % list.size()
 ```
 
 ### 코드
+
 ```java
 LinkedList<Integer> list = new LinkedList<>();
 List<Integer> yosepus = new ArrayList<>();
 
-for (int i = 1; i <= N; i++) list.add(i);
+for(
+int i = 1;
+i <=N;i++)list.
+
+add(i);
 
 int idx = 0;
-while (!list.isEmpty()) {
-    idx = (idx + K - 1) % list.size();
-    yosepus.add(list.remove(idx));
-    // idx는 유지 (remove 후 자동으로 다음 위치)
-}
+while(!list.
+
+isEmpty()){
+idx =(idx +K -1)%list.
+
+size();
+    yosepus.
+
+add(list.remove(idx));
+        // idx는 유지 (remove 후 자동으로 다음 위치)
+        }
 ```
 
 ## 인덱스 계산 원리

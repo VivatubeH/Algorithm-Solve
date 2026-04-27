@@ -1,6 +1,5 @@
-package parametricSearch;
+package baekjoon.parametricSearch;
 import java.io.*;
-import java.util.*;
 
 public class Baekjoon2417 {
     public static void main(String[] args) throws IOException {

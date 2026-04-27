@@ -1,4 +1,4 @@
-package timecomplex;
+package baekjoon.timecomplex;
 import java.io.*;
 import java.util.*;
 

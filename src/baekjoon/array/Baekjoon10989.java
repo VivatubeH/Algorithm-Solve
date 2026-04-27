@@ -1,6 +1,5 @@
-package array;
+package baekjoon.array;
 import java.io.*;
-import java.util.*;
 
 public class Baekjoon10989 {
     /* 풀이 1번 : Arrays.sort를 사용한 풀이 방법. O(N log N)이라 시간 복잡도 최적이 아님.

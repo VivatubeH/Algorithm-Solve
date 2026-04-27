@@ -1,4 +1,4 @@
-package array;
+package baekjoon.array;
 import java.io.*;
 import java.util.StringTokenizer;
 

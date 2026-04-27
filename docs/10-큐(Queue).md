@@ -12,16 +12,16 @@
 import java.util.*;
 
 // Queue는 인터페이스 → LinkedList로 구현
-Queue<Integer> queue = new LinkedList<>();
+Queue<Integer> baekjoon.queue = new LinkedList<>();
 
 // 주요 메서드
-queue.offer(10);    // 삽입 (추가 성공 true, 실패 false 반환)
-queue.add(20);      // 삽입 (실패 시 예외 발생)
-queue.poll();       // 제거 후 반환 (비어있으면 null)
-queue.remove();     // 제거 후 반환 (비어있으면 예외)
-queue.peek();       // 맨 앞 요소 조회 (제거X, 비어있으면 null)
-queue.isEmpty();    // 비어있는지 확인
-queue.size();       // 크기 반환
+baekjoon.queue.offer(10);    // 삽입 (추가 성공 true, 실패 false 반환)
+baekjoon.queue.add(20);      // 삽입 (실패 시 예외 발생)
+baekjoon.queue.poll();       // 제거 후 반환 (비어있으면 null)
+baekjoon.queue.remove();     // 제거 후 반환 (비어있으면 예외)
+baekjoon.queue.peek();       // 맨 앞 요소 조회 (제거X, 비어있으면 null)
+baekjoon.queue.isEmpty();    // 비어있는지 확인
+baekjoon.queue.size();       // 크기 반환
 ```
 
 ### 2. 실전 코드 템플릿
@@ -30,17 +30,17 @@ import java.util.*;
 
 public class QueueTemplate {
     public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> baekjoon.queue = new LinkedList<>();
         
         // 삽입
-        queue.offer(1);
-        queue.offer(2);
-        queue.offer(3);
+        baekjoon.queue.offer(1);
+        baekjoon.queue.offer(2);
+        baekjoon.queue.offer(3);
         
         // 순회 (Queue는 for-each 가능하지만 순서 보장 안 됨)
         // 실전에서는 poll()로 하나씩 꺼내며 처리
-        while (!queue.isEmpty()) {
-            int current = queue.poll();  // 맨 앞 제거하며 가져옴
+        while (!baekjoon.queue.isEmpty()) {
+            int current = baekjoon.queue.poll();  // 맨 앞 제거하며 가져옴
             System.out.println(current); // 1 → 2 → 3
         }
     }
@@ -76,60 +76,70 @@ pq.poll();  // 2가 먼저 나옴 (최소값)
 ### 1. add vs offer
 ```java
 // ❌ add(): 실패 시 예외 발생
-queue.add(x);  // IllegalStateException 가능
+baekjoon.queue.add(x);  // IllegalStateException 가능
 
 // ✅ offer(): 실패 시 false 반환 (권장)
-if (queue.offer(x)) {
+if (baekjoon.queue.offer(x)) {
     // 성공
 }
 ```
 
 ### 2. poll vs remove
+
 ```java
 // ❌ remove(): 빈 큐에서 호출 시 예외
-int x = queue.remove();  // NoSuchElementException
+int x = baekjoon.queue.remove();  // NoSuchElementException
 
 // ✅ poll(): 빈 큐에서 null 반환
-Integer x = queue.poll();
-if (x != null) {
-    // 처리
-}
+Integer x = baekjoon.queue.poll();
+if(x !=null){
+        // 처리
+        }
 ```
 
 ### 3. 순회 시 poll 사용
+
 ```java
 // ❌ for-each는 내부 순서 보장 안 됨
-for (int x : queue) {  
-    // 예측 불가능한 순서
-}
+for(int x :baekjoon.queue){
+        // 예측 불가능한 순서
+        }
 
 // ✅ poll()로 하나씩 꺼내기
-while (!queue.isEmpty()) {
-    int x = queue.poll();  // FIFO 보장
+        while(!queue.
+
+isEmpty()){
+int x = baekjoon.queue.poll();  // FIFO 보장
 }
 ```
 
 ## 디버깅 팁
 
 ### 1. Queue 상태 확인
+
 ```java
 // 현재 큐 내용 확인 (디버깅용)
-System.out.println(queue);  // [1, 2, 3]
+System.out.println(baekjoon.queue);  // [1, 2, 3]
 
 // 맨 앞 요소만 확인 (제거 안 함)
-System.out.println(queue.peek());
+System.out.
+
+println(baekjoon.queue.peek());
 ```
 
 ### 2. 무한 루프 주의
+
 ```java
 // ❌ poll() 없이 순회하면 무한 루프
-while (!queue.isEmpty()) {
-    int x = queue.peek();  // 제거 안 함 → 무한 반복
+while(!baekjoon.queue.isEmpty()){
+int x = baekjoon.queue.peek();  // 제거 안 함 → 무한 반복
 }
 
 // ✅ 반드시 poll()로 제거
-while (!queue.isEmpty()) {
-    int x = queue.poll();  // 제거하며 진행
+        while(!queue.
+
+isEmpty()){
+int x = baekjoon.queue.poll();  // 제거하며 진행
 }
 ```
 

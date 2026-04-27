@@ -32,4 +32,4 @@
 * **개선 방향**: Set의 contains를 처음에 썼는데, add, remove의 특성 상 불필요하다.
 * **배운 점**
 - Set의 add, remove의 동작 기전 ( 가능할 때는 수행 후 true 반환, 불가능 시 false 반환)
-- 인덱스가 있는 List 인터페이스의 구현체만이 sort 가능.
+- 인덱스가 있는 List 인터페이스의 구현체만이 baekjoon.sort 가능.

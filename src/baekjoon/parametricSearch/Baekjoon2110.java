@@ -1,4 +1,4 @@
-package parametricSearch;
+package baekjoon.parametricSearch;
 import java.io.*;
 import java.util.*;
 

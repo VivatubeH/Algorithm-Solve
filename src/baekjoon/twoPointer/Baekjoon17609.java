@@ -1,6 +1,5 @@
-package twoPointer;
+package baekjoon.twoPointer;
 import java.io.*;
-import java.util.*;
 
 public class Baekjoon17609 {
     public static void main(String[] args) throws IOException {

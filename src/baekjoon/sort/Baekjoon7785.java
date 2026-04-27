@@ -1,4 +1,4 @@
-package sort;
+package baekjoon.sort;
 import java.io.*;
 import java.util.*;
 
@@ -21,7 +21,7 @@ public class Baekjoon7785 {
             }
         }
         // 로그를 Set에 기록한 뒤 사전순의 역순으로 정렬한다.
-        // * Set은 순서가 없는 자료구조인데 sort 메서드는 인덱스(순서)가 존재하는 List 인터페이스의 구현 객체만 인자로 받는다.
+        // * Set은 순서가 없는 자료구조인데 baekjoon.sort 메서드는 인덱스(순서)가 존재하는 List 인터페이스의 구현 객체만 인자로 받는다.
         List<String> list = new ArrayList<>(set);
         list.sort((s1, s2) -> s2.compareTo(s1)); // List를 사전순의 역순으로 정렬
         for (String name : list) { // 역순으로 정렬된 list를 순회하면서

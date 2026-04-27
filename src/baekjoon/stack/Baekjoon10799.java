@@ -1,4 +1,4 @@
-package stack;
+package baekjoon.stack;
 import java.io.*;
 import java.util.*;
 
@@ -11,7 +11,7 @@ import java.util.*;
  * - 그러면 '(' 뿐만 아니라 ')'에 대한 체크도 필요함. ( 가장 최근에 입력된 조각이 무엇인가? )를 별도의 스택으로 관리
  * - 방법 :
  * - 입력 시에는 '('는 openStack과 recordStack에 모두 push하고,
- * - ')'가 입력되면 레이저이면 recordStack의 peek()으로 봤을 때, '('이면 레이저 괄호쌍이므로 openStack에서 pop()을 하고 stack.size()만큼이 잘린 막대 개수/ 이후 recordStack.push()
+ * - ')'가 입력되면 레이저이면 recordStack의 peek()으로 봤을 때, '('이면 레이저 괄호쌍이므로 openStack에서 pop()을 하고 baekjoon.stack.size()만큼이 잘린 막대 개수/ 이후 recordStack.push()
  * - ')'가 입력되었는데 recordStack.peek()이 ')'이면 막대의 끝이므로 openStack에서 pop()을 하고, 1개를 카운팅해준다. ( 해당 막대의 끝 ) 이후 recodStack.push
  * 시간: O(L) - 괄호 문자의 개수
  * 주의: 코드 수행 로직 명확히 설계 후, 진행하기.

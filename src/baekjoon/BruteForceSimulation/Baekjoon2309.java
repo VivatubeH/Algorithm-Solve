@@ -1,4 +1,4 @@
-package BruteForceSimulation;
+package baekjoon.BruteForceSimulation;
 import java.util.*;
 import java.io.*;
 

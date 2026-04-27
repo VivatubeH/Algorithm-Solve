@@ -52,22 +52,36 @@ deque.get(0);         // O(n) - 순차 탐색
 ```
 
 ### 3. 리스트 순회 (3가지 방법)
+
 ```java
 // ✅ 방법 1: for-each (가장 빠르고 간결)
-for (int x : list) {
-    System.out.println(x);
+for(int x : list){
+        System.out.
+
+println(x);
 }
 
 // ✅ 방법 2: 인덱스 (수정 필요 시)
-for (int i = 0; i < list.size(); i++) {
-    System.out.println(list.get(i));
-}
+        for(
+int i = 0; i <list.
+
+size();
+
+i++){
+        System.out.
+
+println(list.get(i));
+        }
 
 // ✅ 방법 3: Iterator (삭제 시)
 Iterator<Integer> it = list.iterator();
-while (it.hasNext()) {
-    int x = it.next();
-    if (조건) it.remove();  // 안전한 삭제
+while(it.
+
+hasNext()){
+int x = it.next();
+    if(조건)it.
+
+remove();  // 안전한 삭제
 }
 ```
 
@@ -76,32 +90,54 @@ while (it.hasNext()) {
 ## 주요 변형 패턴
 
 ### 패턴 1: 중간 요소 삭제 (뒤에서부터!)
+
 ```java
 // ❌ 잘못된 예 - 앞에서부터 삭제 (인덱스 밀림 버그)
-for (int i = 0; i < list.size(); i++) {
-    if (list.get(i) % 2 == 0) {
-        list.remove(i);  // 삭제 후 인덱스 꼬임
+for(int i = 0; i <list.
+
+size();
+
+i++){
+        if(list.
+
+get(i) %2==0){
+        list.
+
+remove(i);  // 삭제 후 인덱스 꼬임
     }
-}
+            }
 
 // ✅ 올바른 예 - 뒤에서부터 삭제
-for (int i = list.size() - 1; i >= 0; i--) {
-    if (list.get(i) % 2 == 0) {
-        list.remove(i);  // 안전
+            for(
+int i = list.size() - 1;
+i >=0;i--){
+        if(list.
+
+get(i) %2==0){
+        list.
+
+remove(i);  // 안전
     }
-}
+            }
 ```
 
 ### 패턴 2: 원형 리스트 처리
+
 ```java
 // 백준 1158 요세푸스 문제 스타일
 List<Integer> list = new ArrayList<>();
 int idx = 0;
 
-while (!list.isEmpty()) {
-    idx = (idx + K - 1) % list.size();  // 원형 인덱스
-    System.out.println(list.remove(idx));
-}
+while(!list.
+
+isEmpty()){
+idx =(idx +K -1)%list.
+
+size();  // 원형 인덱스
+    System.out.
+
+println(list.remove(idx));
+        }
 ```
 
 ### 패턴 3: LinkedList를 Deque처럼 사용
@@ -124,16 +160,25 @@ right.addFirst(c);
 ## 실수 포인트 & 디버깅 팁
 
 ### ❌ 흔한 실수 1: 삭제 중 size() 캐싱
+
 ```java
 // ❌ 잘못된 코드
 int n = list.size();
-for (int i = 0; i < n; i++) {
-    list.remove(0);  // size가 줄어드는데 n은 고정
+for(
+int i = 0;
+i<n;i++){
+        list.
+
+remove(0);  // size가 줄어드는데 n은 고정
 }
 
 // ✅ 올바른 코드
-while (!list.isEmpty()) {
-    list.remove(0);
+        while(!list.
+
+isEmpty()){
+        list.
+
+remove(0);
 }
 ```
 
@@ -146,18 +191,29 @@ list.remove(Integer.valueOf(1)); // 값 1 삭제 → [2, 3]
 ```
 
 ### ❌ 흔한 실수 3: LinkedList로 인덱스 접근
+
 ```java
 LinkedList<Integer> list = new LinkedList<>();
 // ... 데이터 1000개 추가
 
 // ❌ 매우 느림 - O(n) × 반복 = O(n²)
-for (int i = 0; i < list.size(); i++) {
-    System.out.println(list.get(i));
-}
+for(
+int i = 0; i <list.
+
+size();
+
+i++){
+        System.out.
+
+println(list.get(i));
+        }
 
 // ✅ for-each 사용 - O(n)
-for (int x : list) {
-    System.out.println(x);
+        for(
+int x :list){
+        System.out.
+
+println(x);
 }
 ```
 
